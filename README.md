@@ -11,14 +11,15 @@ This project uses LangChain and Granite-3.0-2B for toxicity detection and detoxi
 ## Installation
 ```bash
 pip install langchain huggingface_hub transformers langdetect torch pandas sklearn numpy
+```
 
 Update HF_API_TOKEN in the code with your Hugging Face API token:
+
 ```bash
 HF_API_TOKEN = "your_token_here"
 ```
 
 ## Usage
-
 1. **Prepare Datasets**:
    - Add your multilingual data to a CSV file with a `sentence` column.
    - Add your toxicity data to a CSV file with a `text` column.
@@ -40,3 +41,11 @@ HF_API_TOKEN = "your_token_here"
 4. **Evaluation**:
   - Prints toxic samples for manual review.
   - Includes a placeholder for inter-annotator agreement (Cohen's Kappa).
+
+## Notes
+- Replace your hugging face token, empty dataset paths and annotator scores in the code.
+- GPU recommended for faster processing.
+
+## License
+
+MIT License
